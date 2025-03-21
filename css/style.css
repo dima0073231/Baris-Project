@@ -5,12 +5,13 @@
 }
 body {
     font-family: Arial, sans-serif;
+   
 }
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px;
+    padding: 20px;
     background: rgba(0, 0, 0, 0.4);
     position: fixed;
     width: 100%;
@@ -19,14 +20,20 @@ header {
     color: white;
 }
 .logo {
-    font-size: 35px;
+    font-size: 25px;
     font-weight: bold;
-    margin-left:70px ;
-    padding: 10px;
+   
+    padding: 6px;
     background-color: black;
     @media (min-width:768px){
 font-size:25px ;
-
+margin-left: 10px;
+padding: 6px;
+    }
+    @media (min-width:1200px) {
+        font-size: 33px;
+        padding: 10px;
+        
     }
 
 }
@@ -47,11 +54,19 @@ nav ul {
 }
 nav ul li {
     margin: 0 5px;
-    padding-right: 50px;
+    
+    @media (min-width:768px){
+        padding-right: 15px;
+        
+    }
+    @media (min-width:1200px) {
+        padding: 20px;
+        padding-right:35px;
+    }
     
 }
 nav ul li a {
-    
+ 
     text-decoration: none;
     color: white;
 }
@@ -77,29 +92,49 @@ nav ul li a {
     
 }
 h1 {
-    font-size: 43px;
+    font-size: 23px;
     position: relative;
     animation: slideIn 1.5s ease-out;
     background-color: black;
     padding: 10px;
-    width:800px ;
+    
     display: inline-block;
     max-width: 100%;
+    @media (min-width: 768px){
+        font-size: 30px;
+        padding: 5px;
+        max-width: 100%;
+        width: 500px;
+    }
+    @media (min-width:1200px) {
+        font-size: 38px;
+        width:800px ;
+    }
 }
 .button {
     margin-top: 20px;
     padding: 12px 20px;
     border: 1px solid white;
-    color: white;
+   background: transparent;
+   color: white;
     text-decoration: none;
-    font-size: 22px;
+    font-size: 17px;
     border-radius: 5px;
     transition: 0.3s;
     border-radius: 10px;
+    cursor: pointer;
+    @media (min-width:768px){
+        font-size: 20px;
+        padding: 10px 15px;
+        
+    }
+    @media (min-width:1200px) {
+        font-size: 23px;
+        padding: 12px 20px;
+        
+    }
 }
-.button:hover {
-    background: gray;
-}
+
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -147,7 +182,7 @@ h1 {
         position: absolute;
         top: 15px;
         right: 20px;
-        font-size: 24px;
+        font-size: 53px;
         color: white;
         cursor: pointer;
         display: block;
@@ -158,4 +193,28 @@ h1 {
     .close-menu {
         display: none;
     }
+}
+
+.container {
+    display: flex;
+    width: 80%;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.text-section {
+    width: 50%;
+    padding-right: 20px;
+}
+.h2 {
+    font-weight: bold;
+}
+.image-section {
+    width: 50%;
+ 
+}
+.image-section img {
+    width: 100%;
+    border-radius: 8px;
 }
